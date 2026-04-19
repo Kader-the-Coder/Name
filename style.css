@@ -6,7 +6,6 @@ body {
   background-size: cover;
 }
 
-/* overlay */
 body::before {
   content: "";
   position: fixed;
@@ -15,14 +14,12 @@ body::before {
   pointer-events: none;
 }
 
-/* layout */
 .page {
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
 }
 
-/* top */
 .top {
   display: flex;
   justify-content: center;
@@ -30,31 +27,25 @@ body::before {
   padding-top: 25px;
 }
 
-/* middle (NAME AREA) */
 .middle {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   align-items: center;
-
-  /* ✅ THIS IS THE FIX */
   transform: translateY(40px);
 }
 
-/* bottom */
 .bottom {
   padding-bottom: 40px;
 }
 
-/* parents */
 .parents {
   font-size: 0.95rem;
   opacity: 0.85;
   letter-spacing: 1px;
 }
 
-/* name */
+/* NAME */
 .name {
   cursor: pointer;
   user-select: none;
@@ -72,7 +63,7 @@ body::before {
   text-shadow: 0 0 12px rgba(255,255,255,0.6);
 }
 
-/* Arabic */
+/* Arabic font support for full name */
 .arabic {
   font-family: 'Amiri', serif;
   direction: rtl;

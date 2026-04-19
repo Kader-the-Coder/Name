@@ -16,7 +16,6 @@ function handleNameClick() {
   hint.style.opacity = 0;
 }
 
-/* Smooth animated swap (no jank) */
 function toggleName() {
   const name = document.getElementById("name");
 
@@ -26,10 +25,10 @@ function toggleName() {
 
   setTimeout(() => {
     if (showingEnglish) {
-      name.textContent = "زَيْد";
+      name.textContent = "زَيْد غفور";
       name.classList.add("arabic");
     } else {
-      name.textContent = "Zayd";
+      name.textContent = "Zayd Gafoor";
       name.classList.remove("arabic");
     }
 
@@ -41,14 +40,12 @@ function toggleName() {
   }, 160);
 }
 
-/* Audio on name click */
 function playAudio() {
   const audio = document.getElementById("nameAudio");
   audio.currentTime = 0;
   audio.play().catch(() => {});
 }
 
-/* Story toggle (FIXED, working) */
 function toggleStory() {
   const content = document.getElementById("storyContent");
 
