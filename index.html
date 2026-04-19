@@ -13,20 +13,30 @@
 
 <body>
 
-  <div class="d-flex flex-column justify-content-center align-items-center vh-100 text-center px-3 content">
+<div class="page">
 
-    <p class="parents mb-3">
+  <!-- TOP -->
+  <div class="top text-center">
+    <p class="parents mb-0">
       Abdul Kader Gafoor & Zahraa Davids
     </p>
+  </div>
 
-    <!-- Name -->
-    <h1 id="name" class="name display-1 fw-semibold mb-4" onclick="handleNameClick()">
+  <!-- CENTER -->
+  <div class="middle text-center">
+
+    <h1 id="name" class="name display-1 fw-semibold" onclick="handleNameClick()">
       Zayd
     </h1>
 
-    <p id="hint" class="hint mb-3">
+    <p id="hint" class="hint mt-2">
       tap the name
     </p>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="bottom text-center px-3">
 
     <p class="meaning mb-1">
       Increase • Growth • Abundance
@@ -36,30 +46,61 @@
       From the Arabic root ز-ي-د meaning “to increase”
     </p>
 
-    <div class="w-100" style="max-width: 700px;">
+    <!-- STORY BUTTON -->
+    <div class="w-100 mx-auto" style="max-width: 700px;">
+
       <button class="btn btn-outline-light mb-3" onclick="toggleStory()">
         Why this name
       </button>
 
       <div id="storyContent" class="story-content text-start">
+
         <p>
           Zayd ibn Thabit (رضي الله عنه) was a companion of the Prophet Muhammad ﷺ,
           known for his intelligence and literacy.
         </p>
+
         <p>
           He recorded the Qur’an as it was revealed and later led its compilation
           into a single manuscript.
         </p>
+
         <p>
           His legacy is one of precision, trust, and preservation.
         </p>
+
       </div>
+    </div>
+
+    <!-- DUAS -->
+    <div class="dua-section mt-5 w-100 mx-auto" style="max-width: 750px;">
+
+      <div class="dua mb-4">
+        <p class="arabic">
+          بَارَكَ اللَّهُ لَكَ فِي الْمَوْهُوبِ لَكَ، وَشَكَرْتَ الْوَاهِبَ، وَبَلَغَ أَشُدَّهُ، وَرُزِقْتَ بِرَّهُ
+        </p>
+        <p class="translation">
+          “May Allah bless you in what has been given to you, may you thank the Giver, may he reach maturity, and be granted righteousness.”
+        </p>
+      </div>
+
+      <div class="dua mb-4">
+        <p class="arabic">
+          أُعِيذُكَ بِكَلِمَاتِ اللَّهِ التَّامَّةِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ
+        </p>
+        <p class="translation">
+          “I seek protection for you in the perfect words of Allah from every devil, harmful creature, and evil eye.”
+        </p>
+      </div>
+
     </div>
 
   </div>
 
-  <audio id="nameAudio" src="zayd.mp3" preload="auto"></audio>
+</div>
 
-  <script src="script.js"></script>
+<audio id="nameAudio" src="zayd.mp3" preload="auto"></audio>
+
+<script src="script.js"></script>
 </body>
 </html>

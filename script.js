@@ -16,12 +16,12 @@ function handleNameClick() {
   hint.style.opacity = 0;
 }
 
+/* Smooth animated swap (no jank) */
 function toggleName() {
   const name = document.getElementById("name");
 
-  // OUT ANIMATION
   name.style.opacity = 0;
-  name.style.transform = "scale(0.92)";
+  name.style.transform = "scale(0.9)";
   name.style.filter = "blur(6px)";
 
   setTimeout(() => {
@@ -33,21 +33,22 @@ function toggleName() {
       name.classList.remove("arabic");
     }
 
-    // IN ANIMATION
     name.style.opacity = 1;
     name.style.transform = "scale(1)";
     name.style.filter = "blur(0px)";
 
     showingEnglish = !showingEnglish;
-  }, 180);
+  }, 160);
 }
 
+/* Audio on name click */
 function playAudio() {
   const audio = document.getElementById("nameAudio");
   audio.currentTime = 0;
-  audio.play().catch(err => console.error(err));
+  audio.play().catch(() => {});
 }
 
+/* Story toggle (FIXED, working) */
 function toggleStory() {
   const content = document.getElementById("storyContent");
 
