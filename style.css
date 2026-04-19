@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  background: url("BG1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.35);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Parents */
+.parents {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* Name (animated transition) */
+.name {
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: -1px;
+
+  margin-bottom: 30px;
+
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    filter 0.35s ease,
+    text-shadow 0.6s ease;
+}
+
+/* Arabic styling */
+.arabic {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+}
+
+/* Glow after load */
+.name.loaded {
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.6),
+    0 0 30px rgba(255,255,255,0.3);
+}
+
+/* Hint */
+.hint {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  letter-spacing: 1px;
+  transition: opacity 0.5s ease;
+}
+
+/* Meaning */
+.meaning {
+  opacity: 0.9;
+}
+
+.literal {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Story */
+.story-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
